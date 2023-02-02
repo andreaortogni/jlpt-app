@@ -8,26 +8,37 @@
           <option 
             v-for="level in levels" 
             v-bind:key="level.id" 
-            :value="level.id"
+            :value="level"
           >
             {{ level.description }}
           </option>
         </select>
+
+        <div>
+          <span>Learning {{ selectedLevel.description }}</span>
+        </div>
+
+        <div id="cards">
+
+        </div>
     </ApplicationLayout>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onBeforeMount } from 'vue';
 import { Head } from '@inertiajs/vue3';
 import ApplicationLayout from '@/Layouts/ApplicationLayout.vue';
 
-defineProps({
+const props = defineProps({
   levels: {
     type: Array,
     default: []
   }
 });
 
-const selectedLevel = ref(1);
+var selectedLevel = ref(null);
 
+onBeforeMount(() => {
+  selectedLevel.value = props.levels[0];
+});
 </script>
