@@ -14,7 +14,7 @@
             <div class="h-12 w-12"></div>
         </header>
 
-        <div class="flex-auto px-36 pt-12 pb-2">
+        <div class="flex-auto px-20 pt-12 pb-2">
             <div class="flex-auto">
                 <slot />
             </div>
