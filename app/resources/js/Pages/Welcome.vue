@@ -18,7 +18,7 @@
           <span>Learning {{ selectedLevel.description }}</span>
         </div>
 
-        <div id="cards" class="grid grid-flow-col grid-cols-3">
+        <div id="cards" class="">
           <CardComponent :level="selectedLevel.description"></CardComponent>
         </div>
     </ApplicationLayout>

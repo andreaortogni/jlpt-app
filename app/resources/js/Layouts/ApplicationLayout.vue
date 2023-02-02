@@ -3,16 +3,18 @@
 
         <header class="px-3 py-3 flex justify-center items-center text-red-700">
             <Link href="/">
-                <ApplicationLogo class="h-12 w-auto fill-current"></ApplicationLogo>
+                <ApplicationLogo class="h-12 w-12 fill-current"></ApplicationLogo>
             </Link>
             
             <div class="flex-auto flex flex-col justify-center items-center">
                 <h1 v-if="title" class="font-extrabold text-3xl mb-2">{{title}}</h1>
                 <h3 v-if="subTitle" class="font-bold text-lg">{{ subTitle }}</h3>
             </div>
+
+            <div class="h-12 w-12"></div>
         </header>
 
-        <div class="flex-auto px-36 pt-5 pb-2">
+        <div class="flex-auto px-36 pt-12 pb-2">
             <div class="flex-auto">
                 <slot />
             </div>
