@@ -14,20 +14,21 @@
           </option>
         </select>
 
-        <div>
+        <div class="pt-6 pb-3 text-red-700 text-2xl font-bold">
           <span>Learning {{ selectedLevel.description }}</span>
         </div>
 
-        <div id="cards">
-
+        <div id="cards" class="grid grid-flow-col grid-cols-3">
+          <CardComponent :level="selectedLevel.description"></CardComponent>
         </div>
     </ApplicationLayout>
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeMount } from 'vue';
+import { ref, onBeforeMount } from 'vue';
 import { Head } from '@inertiajs/vue3';
 import ApplicationLayout from '@/Layouts/ApplicationLayout.vue';
+import CardComponent from '@/Components/CardComponent.vue';
 
 const props = defineProps({
   levels: {

@@ -12,8 +12,10 @@
             </div>
         </header>
 
-        <div class="flex-auto px-3 pt-5 pb-2">
-            <slot />
+        <div class="flex-auto px-36 pt-5 pb-2">
+            <div class="flex-auto">
+                <slot />
+            </div>
         </div>
 
         <footer class="border-t-gray-200 border-t py-5 px-3">
