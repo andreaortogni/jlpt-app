@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class KanjiTranslation extends Model
 {
     use HasFactory;
+
+    public static function getTranslationById($translationId) {
+        return KanjiTranslation::where('id', $translationId)->first();
+    }
 }

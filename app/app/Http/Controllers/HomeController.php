@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Level;
 use Inertia\Inertia;
-use stdClass;
 
 class HomeController extends Controller {
     

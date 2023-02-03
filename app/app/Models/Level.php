@@ -12,4 +12,8 @@ class Level extends Model
     public static function getAllLevels() {
         return Level::get();
     }
+
+    public static function getLevelbyId($levelId) {
+        return Level::where('id', $levelId)->first();
+    }
 }

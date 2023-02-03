@@ -19,7 +19,7 @@
         </div>
 
         <div id="cards" class="">
-          <CardComponent :level="selectedLevel.description"></CardComponent>
+          <CardComponent :level="selectedLevel.description" :levelId="selectedLevel.id"></CardComponent>
         </div>
     </ApplicationLayout>
 </template>
