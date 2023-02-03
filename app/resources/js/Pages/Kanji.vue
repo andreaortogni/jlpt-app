@@ -17,7 +17,7 @@
             <span class="p-2 px-4 border-l-gray-100 border-l">{{ kanji.kanji.onyomi }}</span>
             <span class="p-2 px-4 border-l-gray-100 border-l">{{ kanji.kanji.kunyomi }}</span>
             <span class="p-2 px-4 border-l-gray-100 border-l">
-                <span v-for="translation in kanji.translations">{{ translation.translation }} <br></span>
+                <span v-for="translation in kanji.translations">{{ $t(translation.translation) }} <br></span>
             </span>
         </div>
     </ApplicationLayout>

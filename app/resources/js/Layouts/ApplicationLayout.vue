@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col h-full bg-gray-100 text-gray-800">
 
-        <header class="px-3 py-3 flex justify-center items-center text-red-700">
+        <header class="px-3 py-3 grid grid-cols-3 text-red-700">
             <Link href="/">
                 <ApplicationLogo class="h-12 w-12 fill-current"></ApplicationLogo>
             </Link>
@@ -11,7 +11,14 @@
                 <h3 v-if="subTitle" class="font-bold text-lg">{{ subTitle }}</h3>
             </div>
 
-            <div class="h-12 w-12"></div>
+            <div class="h-12">
+                <div class="pr-5 text-right">
+                    <select v-model="lang" @change="changeLanguage(lang)" name="lang-select" class="rounded w-18" id="lang-select">
+                        <option value="it">It</option>
+                        <option value="en">En</option>
+                    </select>
+                </div>
+            </div>
         </header>
 
         <div class="flex-auto px-20 pt-12 pb-2">
@@ -39,9 +46,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { onMounted, ref, onBeforeMount} from 'vue';
 import { Link } from '@inertiajs/vue3';
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
+import { loadLanguageAsync } from 'laravel-vue-i18n';
+
+let lang = ref((sessionStorage.getItem('lang')) ? sessionStorage.getItem('lang') : 'en');
 
 defineProps({
   title: {
@@ -53,5 +63,14 @@ defineProps({
     type: String,
     default: "Japanese Language Proficiency Test"
   }
-})
+});
+
+onBeforeMount(()=> {
+    loadLanguageAsync(lang.value);
+});
+
+function changeLanguage(lang) {
+    sessionStorage.setItem("lang", lang);
+    loadLanguageAsync(lang);
+}
 </script>
