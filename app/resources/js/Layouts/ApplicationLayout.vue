@@ -21,7 +21,19 @@
         </div>
 
         <footer class="border-t-gray-200 border-t py-5 px-3">
-            footer content
+            <div class="w-full text-center">
+                <div class="mb-3">
+                    <span>Author: <a href="mailto:andreaortogni@gmail.com">Andrea Ortogni</a></span>
+                </div>
+                <div class="w-full flex flex-row justify-center">
+                    <a target="_blank" href="https://github.com/andreaortogni/jlpt-app">
+                        <img class="max-h-32 mr-4" src="/assets/img/github.png" alt="">
+                    </a>
+                    <a target="_blank" href="https://www.twitter.com/orto_dev">
+                        <img class="max-h-32" src="/assets/img/twitter.png" alt="">
+                    </a>
+                </div>
+            </div>
         </footer>
     </div>
 </template>

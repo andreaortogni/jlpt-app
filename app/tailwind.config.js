@@ -15,6 +15,7 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
             maxHeight: {
+                32: "32px",
                 350: "350px"
             }
         },
