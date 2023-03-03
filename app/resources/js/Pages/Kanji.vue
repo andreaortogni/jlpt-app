@@ -2,7 +2,7 @@
     <Head title="Kanji" />
 
     <ApplicationLayout :title="'Kanji - ' + level.description">
-        <div class="grid grid-cols-4 bg-red-700 text-gray-100 font-bold text-lg">
+        <div class="grid grid-cols-4 bg-red-700 text-gray-100 sticky top-0 font-bold text-lg">
             <span class="p-2 px-4">Kanji</span>
             <span class="p-2 px-4 border-l-gray-100 border-l">Onyomi</span>
             <span class="p-2 px-4 border-l-gray-100 border-l">Kunyomi</span>
